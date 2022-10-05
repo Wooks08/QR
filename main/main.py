@@ -15,18 +15,12 @@ os.system('pip install pyzbar')
 os.system('pip install PyQt5')
 
 app = QApplication(sys.argv)
-
-class ShortCutsWindow(QMainWindow):
-    def __init__(self):
-        super(ShortCutsWindow, self).__init__()
-        uic.loadUi("shortcuts.ui", self)
-
-        self.actionQuit.triggered.connect(lambda x: ShortCutsWindow.close())
-
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
         uic.loadUi("mainwindow.ui", self)
+
+        self.setWindowIcon(QIcon('favicon.ico'))
 
         self.gen.clicked.connect(self.generate)
         self.shortcut_save = QShortcut(QKeySequence('Ctrl+S'), self)
