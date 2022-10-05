@@ -1,3 +1,4 @@
+import os
 import sys
 import pyqrcode
 import pyperclip
@@ -7,7 +8,11 @@ from PyQt5 import uic, QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from sqlalchemy import except_all
+
+os.system('pip install pyqrcode')
+os.system('pip install pillow')
+os.system('pip install pyzbar')
+os.system('pip install PyQt5')
 
 app = QApplication(sys.argv)
 
