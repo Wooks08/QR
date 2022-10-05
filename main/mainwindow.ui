@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+	background-color: rgb(123, 130, 163);
+	color: rgb(255, 250, 208);
+}
+
+#gen{
+	color: rgb(255, 250, 208);
+	font: 75 11pt &quot;Verdana&quot;;
+	height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(95, 101, 126);
+	margin-right: 10px;
+	margin-top: 20px;
+}
+
+
+#text{
+	color: rgb(255, 250, 208);
+	font: 75 11pt &quot;Verdana&quot;;
+	height: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: none;
+	border-bottom: 3px solid;
+	border-bottom-color: rgb(95, 101, 126);
+	background-color: rgb(123, 130, 163);
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+#text::active{
+	background-color: rgb(95, 101, 126);
+	border-radius: 10px;
+}
+
+#IMAGE{
+	color: rgb(255, 250, 208);
+	font: 75 11pt &quot;Verdana&quot;;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontal">
+      <item>
+       <widget class="QLineEdit" name="text"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="gen">
+        <property name="text">
+         <string>GENERATE</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="IMAGE">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionShortCuts"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionShortCuts">
+   <property name="text">
+    <string>ShortCuts</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
